@@ -14,7 +14,6 @@ public class PracticeArray {
 
     public PracticeArray(int size) {
         this.elementData = new int[size];
-        this.size = size;
     }
 
     // Adding to an array (the end of the index)
@@ -23,13 +22,15 @@ public class PracticeArray {
     }
 
     // Adding to an array (specific index)
+    // [] size: 0
+    // Add 0 -> [0] size: 1
     // [0, 1, 2] size: 3
     // add(3, 3) -> [0, 1, 2, 3] size: 4
     public void add(int index, int n) {
         if (index < 0 || index > this.size) {
             throw new IndexOutOfBoundsException();
         }
-        for (int i = this.size - 1; i >= 0; i--) {
+        for (int i = this.size - 1; i >= index; i--) {
             if (i != index) {
                 this.elementData[i] = this.elementData[i - 1];
             }
@@ -52,5 +53,17 @@ public class PracticeArray {
             this.elementData[i] = this.elementData[i + 1];
         }
         this.size--;
+    }
+
+    public String toString() {
+        if (this.size == 0) {
+            return "[]";
+        } else {
+            String result = "[" + this.elementData[0];
+            for (int i = 1; i < this.size; i++) {
+                result += ", " + this.elementData[i];
+            }
+            return result + "]";
+        }
     }
 }
