@@ -1,5 +1,8 @@
 /**
- * Created by Yulong on 9/16/2016.
+ *  Yulong Tan
+ *  9/16/2016
+ *
+ *  Array review class
  */
 
 public class PracticeArray {
