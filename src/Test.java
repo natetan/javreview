@@ -13,7 +13,7 @@ public class Test {
         System.out.println("Remove at end: " + array.toString()); // [0, 1, 2, 3]
         array.remove(0); // removes 0
         System.out.println("Remove at front: " + array.toString()); // [1, 2, 3]
-        array.remove(1); 
+        array.remove(1);
         System.out.println("Removed first index: " + array.toString()); // [1, 3]
     }
 }

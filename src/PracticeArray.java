@@ -55,6 +55,10 @@ public class PracticeArray {
         this.size--;
     }
 
+    public int size() {
+        return this.size;
+    }
+
     public String toString() {
         if (this.size == 0) {
             return "[]";
